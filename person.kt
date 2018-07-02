@@ -25,6 +25,8 @@ class Person2(val firstName: String, val lastName: String = "") {
   }
 }
 
+data class Person3(val firstName: String, val lastName: String = "")
+
 fun main(args: Array<String>) {
   val person = Person("Tomoki")
   person.print()
@@ -37,4 +39,12 @@ fun main(args: Array<String>) {
 
   val person4 = Person2("Tomoki", "Mizogami")
   person4.print()
+
+  val person5 = Person3("Tomoki", "Mizogami")
+  println(person5)
+
+  val person6 = person5.copy()
+  person6.firstName = "Yuki"
+  println(person6)
+  personic().lastName?= "Tomoki"
 }
